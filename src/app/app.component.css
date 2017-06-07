@@ -1,21 +1,32 @@
 /* Not fully supported by most browsers: http://caniuse.com/css-variables/embed */
 :root {
   --app-max-width: 600px;
-  --app-footer-height: 100px;
+  --app-footer-height: 50px;
+  --background-light-grey: rgba(0, 0, 0, .03);
+  --product-image-max-width: 300px;
 }
 
 .app-container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 600px;
+  max-width: 600px; /*--app-max-width*/
   margin: auto;
 }
 
+/*<editor-fold desc="Header">*/
 .app-header {
   flex: 0 0 auto;
+
 }
 
+.app-header-toolbar {
+
+}
+
+/*</editor-fold>*/
+
+/*<editor-fold desc="Body">*/
 .app-body {
   display: flex;
   flex: 1 1 auto;
@@ -24,7 +35,23 @@
   overflow-y: auto;
 }
 
+.product-image {
+  max-width: 300px; /*--product-image-max-width*/
+}
+
+/*</editor-fold>*/
+
+/*<editor-fold desc="Footer">*/
 .app-footer {
   flex: 0 0 auto;
-  height: 100px;
+  background-color: rgba(0, 0, 0, .03); /*--background-light-grey*/
 }
+
+.app-footer-menu {
+  line-height: initial;
+  height: 50px; /*--app-footer-height*/
+  width: 25%;
+  padding-top: 3px;
+}
+
+/*</editor-fold>*/

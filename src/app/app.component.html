@@ -1,6 +1,7 @@
 <div class="app-container">
   <div class="app-header">
-    <md-toolbar color="primary">
+    <md-toolbar color="primary"
+                class="app-header-toolbar ">
       <i class="material-icons md-24">content_cut</i>
       <span>LilyFabric</span>
     </md-toolbar>
@@ -11,42 +12,13 @@
   </div>
 
   <div class="app-footer">
-    <!--<md-tab-group>-->
-      <!--<md-tab>-->
-        <!--<ng-template md-tab-label>-->
-          <!--<i class="material-icons md-24">home</i>-->
-          <!--<div>Home</div>-->
-        <!--</ng-template>-->
-        <!--<h1>Some tab content</h1>-->
-      <!--</md-tab>-->
-      <!--<md-tab>-->
-        <!--<ng-template md-tab-label>-->
-          <!--<i class="material-icons md-24">search</i>-->
-          <!--<div>Filter</div>-->
-        <!--</ng-template>-->
-        <!--<h1>Some more tab content</h1>-->
-      <!--</md-tab>-->
-      <!--<md-tab>-->
-        <!--<ng-template md-tab-label>-->
-          <!--<i class="material-icons md-24">account_circle</i>-->
-          <!--<div>Me</div>-->
-        <!--</ng-template>-->
-        <!--<h1>Some more tab content</h1>-->
-      <!--</md-tab>-->
-      <!--<md-tab>-->
-        <!--<ng-template md-tab-label>-->
-          <!--<i class="material-icons md-24">info</i>-->
-          <!--<div>Us</div>-->
-        <!--</ng-template>-->
-        <!--<h1>Some more tab content</h1>-->
-      <!--</md-tab>-->
-    <!--</md-tab-group>-->
-    <nav md-tab-nav-bar class="app-footer-menu-container">
+    <nav md-tab-nav-bar>
       <a md-tab-link
          class="app-footer-menu"
          *ngFor="let tab of tabs"
          [routerLink]="tab.link"
-         routerLinkActive #rla="routerLinkActive"
+         routerLinkActive
+         #rla="routerLinkActive"
          [active]="rla.isActive">
         <i class="material-icons md-24">{{ tab.icon }}</i>
         <br>
