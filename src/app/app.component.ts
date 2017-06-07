@@ -1,19 +1,27 @@
 import { Component } from '@angular/core';
-import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  myData: Array<any>;
 
-  constructor(private http: Http) {
-    this
-      .http
-      .get('https://jsonplaceholder.typicode.com/photos')
-      .map(response => response.json())
-      .subscribe(response => this.myData = response);
-  }
+export class AppComponent {
+  tabs: Array<any> = [{
+    link: 'home',
+    label: 'Home',
+    icon: 'home'
+  }, {
+    link: 'search',
+    label: 'Search',
+    icon: 'search'
+  }, {
+    link: 'me',
+    label: 'Me',
+    icon: 'account_circle'
+  }, {
+    link: 'us',
+    label: 'Us',
+    icon: 'info'
+  }]
 }
