@@ -1,0 +1,30 @@
+/* Not fully supported by most browsers: http://caniuse.com/css-variables/embed */
+:root {
+  --app-max-width: 600px;
+  --app-footer-height: 100px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.app-header {
+  flex: 0 0 auto;
+}
+
+.app-body {
+  display: flex;
+  flex: 1 1 auto;
+  position: relative;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.app-footer {
+  flex: 0 0 auto;
+  height: 100px;
+}
