@@ -1,31 +1,31 @@
 <div class="app-container">
   <div class="app-header">
     <md-toolbar color="primary">
-      <span>Lilyfabric</span>
-      <span class="example-spacer"></span>
-      <button md-button
-              [mdMenuTriggerFor]="appMenu">
-        <md-icon>menu</md-icon>
-        Menu
-      </button>
+      <i class="material-icons md-24">content_cut</i>
+      <span>LilyFabric</span>
     </md-toolbar>
   </div>
 
   <div class="app-body">
-    <md-menu #appMenu="mdMenu">
-      <button md-menu-item>Home</button>
-      <button md-menu-item>Search</button>
-      <button md-menu-item>Me</button>
-      <button md-menu-item>Us</button>
-    </md-menu>
+    <router-outlet></router-outlet>
 
-    <md-card class="example-card"
-             *ngFor="let photo of (myData ? myData.slice(0, 10) : []); let i = index">
-      <img md-card-image
-           src="{{ photo.url }}">
+    <md-card *ngFor="let photo of (myData ? myData.slice(0, 10) : []); let i = index">
       <md-card-header>
         <md-card-title>{{ photo.title }}</md-card-title>
+        <md-card-subtitle>subtitle</md-card-subtitle>
       </md-card-header>
+
+      <img md-card-image
+           src="{{ photo.url }}">
+
+      <md-card-content>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </md-card-content>
+
       <md-card-actions>
         <button md-button>Like</button>
         <button md-button>Share</button>
@@ -35,19 +35,44 @@
 
   <!-- TODO: hammerjs + content on body -->
   <div class="app-footer">
-    <md-tab-group>
-      <md-tab label="Home">
-        <h1>Some tab content</h1>
-      </md-tab>
-      <md-tab label="Search">
-        <h1>Some more tab content</h1>
-      </md-tab>
-      <md-tab label="Me">
-        <h1>Some more tab content</h1>
-      </md-tab>
-      <md-tab label="About Us">
-        <h1>Some more tab content</h1>
-      </md-tab>
-    </md-tab-group>
+    <!--<md-tab-group>-->
+      <!--<md-tab>-->
+        <!--<ng-template md-tab-label>-->
+          <!--<i class="material-icons md-24">home</i>-->
+          <!--<div>Home</div>-->
+        <!--</ng-template>-->
+        <!--<h1>Some tab content</h1>-->
+      <!--</md-tab>-->
+      <!--<md-tab>-->
+        <!--<ng-template md-tab-label>-->
+          <!--<i class="material-icons md-24">search</i>-->
+          <!--<div>Filter</div>-->
+        <!--</ng-template>-->
+        <!--<h1>Some more tab content</h1>-->
+      <!--</md-tab>-->
+      <!--<md-tab>-->
+        <!--<ng-template md-tab-label>-->
+          <!--<i class="material-icons md-24">account_circle</i>-->
+          <!--<div>Me</div>-->
+        <!--</ng-template>-->
+        <!--<h1>Some more tab content</h1>-->
+      <!--</md-tab>-->
+      <!--<md-tab>-->
+        <!--<ng-template md-tab-label>-->
+          <!--<i class="material-icons md-24">info</i>-->
+          <!--<div>Us</div>-->
+        <!--</ng-template>-->
+        <!--<h1>Some more tab content</h1>-->
+      <!--</md-tab>-->
+    <!--</md-tab-group>-->
+    <nav md-tab-nav-bar>
+      <a md-tab-link
+         *ngFor="let tab of tabs"
+         [routerLink]="tab.link"
+         routerLinkActive #rla="routerLinkActive"
+         [active]="rla.isActive">
+        {{ tab.label }}
+      </a>
+    </nav>
   </div>
 </div>
