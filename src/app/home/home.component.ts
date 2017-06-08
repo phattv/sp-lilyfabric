@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
+import { routerTransition } from '../router.animations';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html'
+  templateUrl: './home.component.html',
+  animations: [routerTransition().slideToLeft()],
+  host: {'[@routerTransition]': ''}
 })
 
 export class HomeComponent {

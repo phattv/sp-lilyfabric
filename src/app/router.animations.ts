@@ -1,7 +1,10 @@
 import { trigger, state, animate, style, transition } from '@angular/animations';
 
 export function routerTransition() {
-  return slideToLeft();
+  return {
+    slideToLeft: slideToLeft,
+    slideToRight: slideToRight
+  }
 }
 
 const triggerName = 'routerTransition',
