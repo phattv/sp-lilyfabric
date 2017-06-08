@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MdButtonModule,
   MdCardModule,
-  MdMenuModule,
   MdToolbarModule,
   MdIconModule,
   MdTabsModule
@@ -38,7 +37,6 @@ import { UsComponent } from './us/us.component';
     HttpModule,
     MdButtonModule,
     MdCardModule,
-    MdMenuModule,
     MdToolbarModule,
     MdIconModule,
     MdTabsModule
