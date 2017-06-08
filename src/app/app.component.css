@@ -17,11 +17,6 @@
 /*<editor-fold desc="Header">*/
 .app-header {
   flex: 0 0 auto;
-
-}
-
-.app-header-toolbar {
-
 }
 
 /*</editor-fold>*/
@@ -33,10 +28,6 @@
   position: relative;
   flex-direction: column;
   overflow-y: auto;
-}
-
-.product-image {
-  max-width: 300px; /*--product-image-max-width*/
 }
 
 /*</editor-fold>*/

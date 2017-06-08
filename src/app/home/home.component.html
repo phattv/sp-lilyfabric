@@ -1,12 +1,10 @@
 <md-card *ngFor="let image of (myData ? myData.slice(0, 10) : []); let i = index">
   <md-card-header>
     <md-card-title>{{ image.title }}</md-card-title>
-    <md-card-subtitle>subtitle</md-card-subtitle>
   </md-card-header>
 
   <img md-card-image
-       class="product-image"
-       src="{{ image.url }}">
+       src="http://placehold.it/300x400">
 
   <md-card-content>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
