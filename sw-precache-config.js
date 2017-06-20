@@ -5,6 +5,7 @@ module.exports = {
   staticFileGlobs: [
     'src/index.html',
     'src/**.js',
-    'src/**.css'
+    // 'src/**.css',
+    'src/assets/images/*'
   ]
 };
