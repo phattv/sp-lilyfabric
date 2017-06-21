@@ -11,7 +11,7 @@ const triggerName = 'routerTransition',
   animationDuration = '0.3s',
   animationFunction = 'ease-in-out';
 
-function slideToRight() {
+export function slideToRight() {
   return trigger(triggerName, [
     // state('void', style({ position: 'fixed', width: '100%' })),
     // state('*', style({ position: 'fixed', width: '100%' })),
@@ -26,7 +26,7 @@ function slideToRight() {
   ]);
 }
 
-function slideToLeft() {
+export function slideToLeft() {
   return trigger(triggerName, [
     // state('void', style({ position: 'fixed', width: '100%' })),
     // state('*', style({ position: 'fixed', width: '100%' })),
