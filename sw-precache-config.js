@@ -1,12 +1,12 @@
 module.exports = {
   navigateFallback: '/index.html',
-  stripPrefix: 'src',
-  root: 'src/',
+  stripPrefix: 'dist',
+  root: 'dist/',
   staticFileGlobs: [
-    'src/index.html',
-    'src/**.js',
-    // 'src/**.css',
-    'src/assets/images/*'
+    'dist/index.html',
+    'dist/**.js',
+    'dist/**.css',
+    'dist/assets/images/*'
   ],
   runtimeConfig: [{
     urlPattern: /jsonplaceholder\.typicode\.com\/photos/,
