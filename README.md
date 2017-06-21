@@ -17,10 +17,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - New *component-level* service/pipe/component, manually create new file in the component directory
 
 ## Build
-- Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-- Run `ng build --prod` flag for a production build.
-- Run `npm run sw` to generate `service-worker.js` for `dist/`
+- Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. (use `--prod --aot` for production build).
+- Run `npm run sw` to generate `service-worker.js` for `dist/`.
 - Run `npm run serve-dist` to serve dist folder in localhost.
+
+(shortcut: `npm run build-prod`)
 
 ## Running unit tests
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
