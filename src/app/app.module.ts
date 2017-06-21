@@ -11,7 +11,6 @@ import {
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import 'hammerjs';
 
 // App modules & components
 import { AppComponent } from './app.component';
