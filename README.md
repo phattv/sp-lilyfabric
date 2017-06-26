@@ -1,5 +1,5 @@
 # Lilyfabric
-Project of 2 young couple, trying to learn as much as possible about web development & real-life custom-tailored fashion shop business experience.
+Project of a young couple, trying to learn as much as possible about web development & real-life custom-tailored fashion shop business experience.
 
 ## Project setup
 - Install node js v6 (6.10.3), [nvm](https://github.com/creationix/nvm/blob/master/README.md) is recommended
